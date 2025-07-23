@@ -1,12 +1,17 @@
-import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AppBarTop from "./components/AppBarTop";
+import HomePage from "./pages/HomePage";
+import ProjectPage from "./pages/ProjectPage";
 
 function App() {
   return (
-    <div style={{ padding: '2rem', textAlign: 'center' }}>
-      <h1>Hello, I'm Junzilla1111 👋</h1>
-      <p>Welcome to my portfolio website!</p>
-      <a href="https://github.com/junzilla" target="_blank" rel="noreferrer">My GitHub</a>
-    </div>
+    <Router>
+      <AppBarTop />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/projects" element={<ProjectPage />} />
+      </Routes>
+    </Router>
   );
 }
 

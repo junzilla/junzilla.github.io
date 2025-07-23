@@ -1,0 +1,156 @@
+[
+  {
+    "id": "1",
+    "title": "Snake",
+    "description": "An 8-digit 7-segment LED display animates the classic game 'Snake'. Develop structural and dataflow models of logic circuits in a Hardware Description Language",
+    "tools": {
+      "hardware": [
+        "DE10-Lite FPGA Board"
+      ],
+      "software": [
+        "Verilog",
+        "ModelSim",
+        "Quartus"
+      ]
+    },
+    "media": {
+      "images": [
+        "snake1.jpeg",
+        "snake2.jpeg"
+      ],
+      "videos": [
+        "1_snake.mp4"
+      ]
+    },
+    "challenges": [
+      
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Auto Watering",
+    "description": "Automatic Control Watering System Based on Humidity Sensor",
+    "tools": {
+      "hardware": [
+        "Arduino UNO Board",
+        "LCD1602",
+        "Humidity Sensor",
+        "Relay Module",
+        "Pump",
+        "Expansion Board",
+        "DuPont Wires",
+        "Hose Tube",
+        "4-cell AA Battery Holder"
+      ],
+      "software": [
+        "C++",
+        "Arduino IDE"
+      ]
+    },
+    "media": {
+      "images": [
+        "t1.jpeg",
+        "watering2.jpeg"
+      ],
+      "videos": [
+        "2_watering.mp4"
+      ]
+    },
+    "challenges": [
+      "Humidity sensor calibration"
+    ]
+  },
+  {
+    "id": "3",
+    "title": "RoboGridner Website",
+    "description": "An offcial website for RoboGrinder at Virginia Tech.",
+    "link": "robogrinder.org",
+    "tools": {
+      "hardware": [
+        "Amazon Lightsail"
+      ],
+      "software": [
+        "WordPress",
+        "CSS",
+        "HTML",
+        "PuTTY"
+      ]
+    },
+    "media": {
+      "images": [],
+      "videos": []
+    },
+    "challenges": [
+      "SSH"
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Population Visualization Website",
+    "description": "An offcial website for RoboGrinder at Virginia Tech.",
+    "link": null,
+    "tools": {
+      "hardware": [
+        "Local machine"
+      ],
+      "software": [
+        "React",
+        "MongoDB",
+        "Express",
+        "Node.js"
+      ]
+    },
+    "media": {
+      "images": [],
+      "videos": []
+    },
+    "challenges": [
+      "MongoDB data backend fronent connection",
+      "The reusability of components",
+      "JSON file structure"
+    ]
+  },
+  {
+    "id": "5",
+    "title": "VTACSS Website",
+    "description": "An offcial website for Association of Chinese Students and Scholars at Virginia Tech.",
+    "link": "vt-acss.org",
+    "tools": {
+      "hardware": [
+        "Amaozn S3"
+      ],
+      "software": [
+        "Astro"
+      ]
+    },
+    "media": {
+      "images": [],
+      "videos": []
+    },
+    "challenges": [
+      "I had to consider the impact of image compression on the server's upstream traffic and the users' downstream traffic. In order to unify the resource management, I re-adjusted the format, size and aspect ratio of all the photos."
+    ]
+  },
+    {
+    "id": "6",
+    "title": "RunCat Localizaiton",
+    "description": "I’ve liked this software for many years, but it never had a Chinese version, so I wanted to contribute to it.",
+    "link": "apps.apple.com/us/app/runcat/id1429033973",
+    "tools": {
+      "hardware": [
+        "MacBook"
+      ],
+      "software": [
+        "Xcode",
+        "GitHub"
+      ]
+    },
+    "media": {
+      "images": [],
+      "videos": []
+    },
+    "challenges": [
+      "I had to make a pull request (PR) — something I had never done before. I spent time learning how the PR workflow works, and carefully followed the process to avoid making mistakes that could cause issues for author’s project."
+    ]
+  }
+]
