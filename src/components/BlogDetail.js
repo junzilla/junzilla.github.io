@@ -8,18 +8,14 @@ const BlogDetail = ({ blog }) => {
   return (
     <div>
       <Typography variant="h4">{blog.title}</Typography>
-
       <Divider sx={{ marginY: 2 }} />
-      <ul>
-          <li><strong>Date: </strong>{blog.date}</li>
-      </ul>
-
-        <React.Fragment>
-          <Typography variant="h6" sx={{ marginTop: 2 }}>Main Content</Typography>
-          <ul>
-            {blog.text}
-          </ul>
-        </React.Fragment>
+      <Typography><strong>Date: </strong>{blog.date}</Typography>
+      <React.Fragment>
+        <Typography variant="h6" sx={{ marginTop: 2 }}>Main Content</Typography>
+        <ul>
+          {blog.text}
+        </ul>
+      </React.Fragment>
 
       {/* 媒体文件（Json会把图片和视频以数组方式存储，这里用map遍历 */}
       {blog.media?.images?.length > 0 && (

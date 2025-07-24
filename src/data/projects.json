@@ -33,7 +33,7 @@
   {
     "id": "2",
     "title": "Snake",
-    "description": "An 8-digit 7-segment LED display animates the classic game 'Snake'. Develop structural and dataflow models of logic circuits in a Hardware Description Language",
+    "description": "An 8-digit 7-segment LED display animates the classic game 'Snake'. Develop structural and dataflow models of logic circuits in a Hardware Description Language.",
     "link": null,
     "tools": {
       "hardware": [
@@ -56,7 +56,7 @@
   {
     "id": "3",
     "title": "Auto Watering",
-    "description": "Automatic Control Watering System Based on Humidity Sensor",
+    "description": "Automatic Control Watering System Based on Humidity Sensor.",
     "link": null,
     "tools": {
       "hardware": [
@@ -125,7 +125,7 @@
         "Express",
         "React",
         "Node",
-        "so called MERN"
+        "so called MERN stack."
       ]
     },
     "media": {
@@ -211,7 +211,7 @@
   {
     "id": "9",
     "title": "Personal Website",
-    "description": "",
+    "description": "My digital home — built with React and MUI library — where I present my projects, share my blogs, and experiment with frontend design.",
     "link": "https://junzilla.github.io",
     "tools": {
       "hardware": [
@@ -228,7 +228,9 @@
       "videos": []
     },
     "challenges": [
-      "I want to have a thorough understanding of the MUI library and enhance my proficiency and ability to break down components, so as to facilitate future maintenance."
+      "Reusable components: facilitate future maintenance.",
+      "Static JSON file used as data source: If I want to add a project or a blog, I just need to modify the keys and values in the JSON file. The components will ”map“ these data.",
+      "Music player on the BlogPage: learning offical documention about design."
     ]
   }
 ]
