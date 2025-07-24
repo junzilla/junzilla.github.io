@@ -8,9 +8,9 @@ const ProjectPage = () => {
   const [selectedProject, setSelectedProject] = useState(projects[0]);
 
   return (
-    <Box sx={{ display: "flex", height: "100%", padding: 2 }}>
+    <Box sx={{ display: "fixed", height: "100%"}}>
       {/* 左侧导航 */}
-      <Box sx={{ width: 200, borderRight: 1, borderColor: "divider" }}>
+      <Box sx={{ width: 200, borderRight: 3, borderColor: "divider", mt: 8}}>
         <List>
           {projects.map((proj, index) => (
             <React.Fragment key={proj.id}>
@@ -26,7 +26,7 @@ const ProjectPage = () => {
       </Box>
 
       {/* 右侧展示 */}
-      <Box sx={{ flexGrow: 1, paddingLeft: 3 }}>
+      <Box sx={{ flexGrow: 1, paddingLeft: 3, paddingRight: 3, paddingBottom: 3, mt: 12 }}>
         <ProjectDetail project={selectedProject} />
       </Box>
     </Box>

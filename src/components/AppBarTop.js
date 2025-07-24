@@ -28,7 +28,7 @@ const AppBarTop = () => {
 
   return (
     <>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Toolbar sx={{ height: 65, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <Typography
             variant="h6"

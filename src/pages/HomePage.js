@@ -5,7 +5,7 @@ function App() {
   return (
     <Box>
       {/* 主体内容区域，居中且有最大宽度 */}
-      <Container maxWidth="sm" sx={{ mt: 4, px: 2 }}>
+      <Container maxWidth="sm" sx={{ mt: 12, px: 2 }}>
         <Typography variant="h4" align="center" gutterBottom>
           Hi, I'm Junjie Lin 👋
         </Typography>

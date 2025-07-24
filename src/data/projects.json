@@ -1,6 +1,30 @@
 [
   {
     "id": "1",
+    "title": "RoboGrinder Website",
+    "description": "An offcial website for RoboGrinder at Virginia Tech.",
+    "link": "robogrinder.org",
+    "tools": {
+      "hardware": [
+        "Amazon Lightsail"
+      ],
+      "software": [
+        "WordPress",
+        "HTML",
+        "CSS",
+        "PuTTY"
+      ]
+    },
+    "media": {
+      "images": [],
+      "videos": []
+    },
+    "challenges": [
+      "SSH", "Public key", "Private key"
+    ]
+  },
+  {
+    "id": "2",
     "title": "Snake",
     "description": "An 8-digit 7-segment LED display animates the classic game 'Snake'. Develop structural and dataflow models of logic circuits in a Hardware Description Language",
     "tools": {
@@ -15,19 +39,16 @@
     },
     "media": {
       "images": [
-        "snake1.jpeg",
-        "snake2.jpeg"
       ],
       "videos": [
-        "1_snake.mp4"
+        "2_snake.mp4"
       ]
     },
     "challenges": [
-      
     ]
   },
   {
-    "id": "2",
+    "id": "3",
     "title": "Auto Watering",
     "description": "Automatic Control Watering System Based on Humidity Sensor",
     "tools": {
@@ -49,11 +70,9 @@
     },
     "media": {
       "images": [
-        "t1.jpeg",
-        "watering2.jpeg"
       ],
       "videos": [
-        "2_watering.mp4"
+        "3_watering.mp4"
       ]
     },
     "challenges": [
@@ -61,31 +80,29 @@
     ]
   },
   {
-    "id": "3",
-    "title": "RoboGridner Website",
-    "description": "An offcial website for RoboGrinder at Virginia Tech.",
-    "link": "robogrinder.org",
+    "id": "4",
+    "title": "Tower of Hanoi",
+    "description": "XXX",
+    "link": null,
     "tools": {
       "hardware": [
-        "Amazon Lightsail"
+        "MacBook"
       ],
       "software": [
-        "WordPress",
-        "CSS",
-        "HTML",
-        "PuTTY"
+        "Java",
+        "Eclipse"
       ]
     },
     "media": {
       "images": [],
-      "videos": []
+      "videos": ["4_hanoi.mp4"]
     },
     "challenges": [
-      "SSH"
+      "Stack", "Queue", "Recursion"
     ]
   },
   {
-    "id": "4",
+    "id": "5",
     "title": "Population Visualization Website",
     "description": "An offcial website for RoboGrinder at Virginia Tech.",
     "link": null,
@@ -111,7 +128,7 @@
     ]
   },
   {
-    "id": "5",
+    "id": "6",
     "title": "VTACSS Website",
     "description": "An offcial website for Association of Chinese Students and Scholars at Virginia Tech.",
     "link": "vt-acss.org",
@@ -128,11 +145,11 @@
       "videos": []
     },
     "challenges": [
-      "I had to consider the impact of image compression on the server's upstream traffic and the users' downstream traffic. In order to unify the resource management, I re-adjusted the format, size and aspect ratio of all the photos."
+      "I had to consider the impact of image compression on the server's upstream traffic and the users' downstream traffic. In order to unify the resource management, I re-adjusted the format, size and aspect ratio of all the photos. Also, I need to optimize for mobile devices."
     ]
   },
     {
-    "id": "6",
+    "id": "7",
     "title": "RunCat Localizaiton",
     "description": "I’ve liked this software for many years, but it never had a Chinese version, so I wanted to contribute to it.",
     "link": "apps.apple.com/us/app/runcat/id1429033973",
