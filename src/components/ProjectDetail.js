@@ -1,13 +1,29 @@
 // src/components/ProjectDetail.js
 import React from "react";
-import { Typography, Divider } from "@mui/material";
+import { Link, Typography, Divider, Box } from "@mui/material";
+import IconButton from '@mui/material/IconButton';
+import LanguageIcon from '@mui/icons-material/Language';
 
 const ProjectDetail = ({ project }) => {
   if (!project) return null;
 
   return (
     <div>
-      <Typography variant="h4">{project.title}</Typography>
+      <Box sx={{ display: "flex", gap: 1 }}>
+        <Typography variant="h4">{project.title}</Typography>
+        {project.link && (
+          <IconButton
+            component="a"
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LanguageIcon />
+          </IconButton>
+        )}
+      </Box>
+
+
       <Typography variant="body1" sx={{ marginTop: 1 }}>
         {project.description}
       </Typography>
@@ -54,7 +70,6 @@ const ProjectDetail = ({ project }) => {
             <video
               key={i}
               controls
-              volume='50'
               style={{ width: "100%", maxWidth: 500, marginTop: 10 }}
               src={`/projects/videos/${video}`}
             >

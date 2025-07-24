@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+// src/pages/HomePage.js
 import { AppBar, Button, Box, Toolbar, Typography, Container } from "@mui/material";
 
 function App() {

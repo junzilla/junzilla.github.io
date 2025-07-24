@@ -28,7 +28,7 @@ const AppBarTop = () => {
 
   return (
     <>
-      <AppBar position="fixed">
+      <AppBar position="fixed" elevation={0}>
         <Toolbar sx={{ height: 65, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <Typography
             variant="h6"
@@ -50,14 +50,14 @@ const AppBarTop = () => {
               <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer(false)}>
                 <Box sx={{ width: 200 }} role="presentation" onClick={toggleDrawer(false)}>
                   <List>
+                    <ListItem button component={RouterLink} to="/">
+                      <ListItemText primary="Home" />
+                    </ListItem>
                     <ListItem button component={RouterLink} to="/projects">
                       <ListItemText primary="Projects" />
                     </ListItem>
-                    <ListItem button component={RouterLink} to="/blog">
-                      <ListItemText primary="Blog" />
-                    </ListItem>
-                    <ListItem button component={RouterLink} to="/music">
-                      <ListItemText primary="Music" />
+                    <ListItem button component={RouterLink} to="/blogs">
+                      <ListItemText primary="Blogs" />
                     </ListItem>
                   </List>
                 </Box>
@@ -71,11 +71,8 @@ const AppBarTop = () => {
               <Button color="inherit" component={RouterLink} to="/projects">
                 Projects
               </Button>
-              <Button color="inherit" component={RouterLink} to="/blog">
-                Blog
-              </Button>
-              <Button color="inherit" component={RouterLink} to="/music">
-                Music
+              <Button color="inherit" component={RouterLink} to="/blogs">
+                Blogs
               </Button>
             </Box>
           )}

@@ -2,8 +2,8 @@
   {
     "id": "1",
     "title": "RoboGrinder Website",
-    "description": "An offcial website for RoboGrinder at Virginia Tech.",
-    "link": "robogrinder.org",
+    "description": "An offcial website for RoboGrinder, an undergraduate robotic engineering design team at Virginia Tech.",
+    "link": "http://robogrinder.org",
     "tools": {
       "hardware": [
         "Amazon Lightsail"
@@ -27,6 +27,7 @@
     "id": "2",
     "title": "Snake",
     "description": "An 8-digit 7-segment LED display animates the classic game 'Snake'. Develop structural and dataflow models of logic circuits in a Hardware Description Language",
+    "link": null,
     "tools": {
       "hardware": [
         "DE10-Lite FPGA Board"
@@ -51,6 +52,7 @@
     "id": "3",
     "title": "Auto Watering",
     "description": "Automatic Control Watering System Based on Humidity Sensor",
+    "link": null,
     "tools": {
       "hardware": [
         "Arduino UNO Board",
@@ -104,17 +106,18 @@
   {
     "id": "5",
     "title": "Population Visualization Website",
-    "description": "An offcial website for RoboGrinder at Virginia Tech.",
+    "description": "XXX",
     "link": null,
     "tools": {
       "hardware": [
         "Local machine"
       ],
       "software": [
-        "React",
         "MongoDB",
         "Express",
-        "Node.js"
+        "React",
+        "Node",
+        "so called MERN"
       ]
     },
     "media": {
@@ -131,13 +134,14 @@
     "id": "6",
     "title": "VTACSS Website",
     "description": "An offcial website for Association of Chinese Students and Scholars at Virginia Tech.",
-    "link": "vt-acss.org",
+    "link": "https://vt-acss.org",
     "tools": {
       "hardware": [
         "Amaozn S3"
       ],
       "software": [
-        "Astro"
+        "Astro",
+        "Visual Studio Code"
       ]
     },
     "media": {
@@ -148,11 +152,34 @@
       "I had to consider the impact of image compression on the server's upstream traffic and the users' downstream traffic. In order to unify the resource management, I re-adjusted the format, size and aspect ratio of all the photos. Also, I need to optimize for mobile devices."
     ]
   },
-    {
+      {
     "id": "7",
+    "title": "Fancy Gallery",
+    "description": "A mobile software collecting photos from Flickr.",
+    "link": null,
+    "tools": {
+      "hardware": [
+        "MacBook",
+        "Google Pixel 7"
+      ],
+      "software": [
+        "Kotlin",
+        "Android Studio"
+      ]
+    },
+    "media": {
+      "images": [],
+      "videos": []
+    },
+    "challenges": [
+      "API", "Local storage"
+    ]
+  },
+    {
+    "id": "8",
     "title": "RunCat Localizaiton",
     "description": "I’ve liked this software for many years, but it never had a Chinese version, so I wanted to contribute to it.",
-    "link": "apps.apple.com/us/app/runcat/id1429033973",
+    "link": "https://apps.apple.com/us/app/runcat/id1429033973",
     "tools": {
       "hardware": [
         "MacBook"
@@ -168,6 +195,29 @@
     },
     "challenges": [
       "I had to make a pull request (PR) — something I had never done before. I spent time learning how the PR workflow works, and carefully followed the process to avoid making mistakes that could cause issues for author’s project."
+    ]
+  },
+      {
+    "id": "9",
+    "title": "Personal Website",
+    "description": "",
+    "link": "https://junzilla.github.io",
+    "tools": {
+      "hardware": [
+        "MacBook"
+      ],
+      "software": [
+        "React",
+        "MUI",
+        "Visual Studio Code"
+      ]
+    },
+    "media": {
+      "images": [],
+      "videos": []
+    },
+    "challenges": [
+      "I want to have a thorough understanding of the MUI library and enhance my proficiency and ability to break down components, so as to facilitate future maintenance."
     ]
   }
 ]

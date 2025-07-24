@@ -8,14 +8,25 @@ const ProjectPage = () => {
   const [selectedProject, setSelectedProject] = useState(projects[0]);
 
   return (
-    <Box sx={{ display: "fixed", height: "100%"}}>
+    <Box sx={{ display: "fixed", height: "100%" }}>
       {/* 左侧导航 */}
-      <Box sx={{ width: 200, borderRight: 3, borderColor: "divider", mt: 8}}>
+      <Box sx={{ width: 200, borderRight: 3, borderColor: "divider", mt: 7 }}>
         <List>
           {projects.map((proj, index) => (
             <React.Fragment key={proj.id}>
               <ListItem disablePadding>
-                <ListItemButton onClick={() => setSelectedProject(proj)}>
+                <ListItemButton onClick={() => setSelectedProject(proj)}
+                  selected={selectedProject.id === proj.id}
+                  sx={{
+                    '&.Mui-selected': {
+                      backgroundColor: 'primary.main',
+                      color: 'white',
+                      '&:hover': {
+                        backgroundColor: 'primary.dark',
+                      }
+                    }
+                  }}
+                >
                   <ListItemText primary={proj.title} />
                 </ListItemButton>
               </ListItem>

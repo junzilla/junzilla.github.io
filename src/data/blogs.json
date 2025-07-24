@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Test ID 1",
+    "date": "2023-07-01",
+    "text": "Test test",
+    "media": {
+      "images": [],
+      "videos": []
+    }
+  },
+  {
+    "id": 2,
+    "title": "Test ID 2",
+    "date": "2025-07-2",
+    "text": "Test test test",
+    "media": {
+      "images": [],
+      "videos": []
+    }
+  }
+]
