@@ -1,6 +1,6 @@
 // src/components/ProjectDetail.js
 import React from "react";
-import { Link, Typography, Divider, Box } from "@mui/material";
+import { Link, Typography, Divider, Box, ImageList, ImageListItem } from "@mui/material";
 import IconButton from '@mui/material/IconButton';
 import LanguageIcon from '@mui/icons-material/Language';
 

@@ -16,11 +16,18 @@
       ]
     },
     "media": {
-      "images": [],
+      "images": [
+        "1_rg.jpg",
+        "2_rg.jpg",
+        "3_rg.jpg",
+        "4_rg.jpg"
+      ],
       "videos": []
     },
     "challenges": [
-      "SSH", "Public key", "Private key"
+      "SSH",
+      "Public key",
+      "Private key"
     ]
   },
   {
@@ -39,14 +46,12 @@
       ]
     },
     "media": {
-      "images": [
-      ],
+      "images": [],
       "videos": [
         "2_snake.mp4"
       ]
     },
-    "challenges": [
-    ]
+    "challenges": []
   },
   {
     "id": "3",
@@ -71,8 +76,7 @@
       ]
     },
     "media": {
-      "images": [
-      ],
+      "images": [],
       "videos": [
         "3_watering.mp4"
       ]
@@ -97,10 +101,14 @@
     },
     "media": {
       "images": [],
-      "videos": ["4_hanoi.mp4"]
+      "videos": [
+        "4_hanoi.mp4"
+      ]
     },
     "challenges": [
-      "Stack", "Queue", "Recursion"
+      "Stack",
+      "Queue",
+      "Recursion"
     ]
   },
   {
@@ -133,7 +141,7 @@
   {
     "id": "6",
     "title": "VTACSS Website",
-    "description": "An offcial website for Association of Chinese Students and Scholars at Virginia Tech.",
+    "description": "An offcial website for Association of Chinese Students and Scholars at Virginia Tech. I worked together with two other members of the club to maintain the website.",
     "link": "https://vt-acss.org",
     "tools": {
       "hardware": [
@@ -152,7 +160,7 @@
       "I had to consider the impact of image compression on the server's upstream traffic and the users' downstream traffic. In order to unify the resource management, I re-adjusted the format, size and aspect ratio of all the photos. Also, I need to optimize for mobile devices."
     ]
   },
-      {
+  {
     "id": "7",
     "title": "Fancy Gallery",
     "description": "A mobile software collecting photos from Flickr.",
@@ -160,7 +168,7 @@
     "tools": {
       "hardware": [
         "MacBook",
-        "Google Pixel 7"
+        "Google Pixel 4"
       ],
       "software": [
         "Kotlin",
@@ -169,13 +177,16 @@
     },
     "media": {
       "images": [],
-      "videos": []
+      "videos": [
+        "7_fancygallery.mp4"
+      ]
     },
     "challenges": [
-      "API", "Local storage"
+      "API",
+      "Local storage"
     ]
   },
-    {
+  {
     "id": "8",
     "title": "RunCat Localizaiton",
     "description": "I’ve liked this software for many years, but it never had a Chinese version, so I wanted to contribute to it.",
@@ -197,7 +208,7 @@
       "I had to make a pull request (PR) — something I had never done before. I spent time learning how the PR workflow works, and carefully followed the process to avoid making mistakes that could cause issues for author’s project."
     ]
   },
-      {
+  {
     "id": "9",
     "title": "Personal Website",
     "description": "",
