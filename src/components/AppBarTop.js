@@ -7,15 +7,13 @@ import {
   Button,
   IconButton,
   Drawer,
-  List,
-  ListItem,
-  ListItemText,
   Box,
   useMediaQuery
 } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
+import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import { useTheme } from "@mui/material/styles";
 import { Link as RouterLink } from "react-router-dom";
+
 
 const AppBarTop = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -29,7 +27,9 @@ const AppBarTop = () => {
   return (
     <>
       <AppBar position="fixed" elevation={0}>
-        <Toolbar sx={{ height: 65, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <Toolbar sx={{ height: 65, position: "relative" }}>
+          {/* 姓名：桌面端左对齐，移动端居中 */}
+          {/* ...(isMobile ? { ... } : { ... }) 是JS中的三元表达式Ternary Expression */}
           <Typography
             variant="h6"
             component={RouterLink}
@@ -37,34 +37,73 @@ const AppBarTop = () => {
             sx={{
               textDecoration: "none",
               color: "inherit",
+              fontWeight: "bold",
+              ...(isMobile
+                ? {
+                  position: "absolute",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                }
+                : { ml: 4 })
             }}
           >
             Junjie Lin
           </Typography>
 
+          {/* 右侧更多菜单图标 */}
           {isMobile ? (
             <>
-              <IconButton color="inherit" edge="end" onClick={toggleDrawer(true)}>
-                <MenuIcon />
+              <IconButton
+                color="inherit"
+                edge="end"
+                onClick={toggleDrawer(true)}
+                sx={{ position: "absolute", right: 16 }}
+              >
+                <MoreHorizIcon />
               </IconButton>
-              <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer(false)}>
-                <Box sx={{ width: 200 }} role="presentation" onClick={toggleDrawer(false)}>
-                  <List>
-                    <ListItem button component={RouterLink} to="/">
-                      <ListItemText primary="Home" />
-                    </ListItem>
-                    <ListItem button component={RouterLink} to="/projects">
-                      <ListItemText primary="Projects" />
-                    </ListItem>
-                    <ListItem button component={RouterLink} to="/blogs">
-                      <ListItemText primary="Blogs" />
-                    </ListItem>
-                  </List>
-                </Box>
+              <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer(false)} slotProps={{
+                paper: {
+                  sx: {
+                    height: 65, // 只覆盖 AppBar 区域
+                    width: "100%", // 往左延伸至覆盖整个 AppBar
+                    backgroundColor: theme.palette.primary.main,
+                    color: 'white',
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "space-evenly"
+                  }
+                }
+
+              }}>
+                <Button
+                  color="inherit"
+                  component={RouterLink}
+                  to="/"
+                  onClick={toggleDrawer(false)}
+                >
+                  Home
+                </Button>
+                <Button
+                  color="inherit"
+                  component={RouterLink}
+                  to="/projects"
+                  onClick={toggleDrawer(false)}
+                >
+                  Projects
+                </Button>
+                <Button
+                  color="inherit"
+                  component={RouterLink}
+                  to="/blogs"
+                  onClick={toggleDrawer(false)}
+                >
+                  Blogs
+                </Button>
               </Drawer>
             </>
           ) : (
-            <Box>
+            <Box sx={{ marginLeft: "auto" }}>
               <Button color="inherit" component={RouterLink} to="/">
                 Home
               </Button>

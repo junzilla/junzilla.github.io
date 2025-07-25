@@ -1,5 +1,5 @@
 // src/pages/HomePage.js
-import { AppBar, Button, Box, Toolbar, Typography, Container } from "@mui/material";
+import { Box, Typography, Container } from "@mui/material";
 
 function App() {
   return (

@@ -4,7 +4,7 @@ import blogs from "../data/blogs.json";
 import BlogDetail from "../components/BlogDetail";
 import BlogWallPaper from '../components/BlogWallPaper';
 import MusicPlayerSlider from "../components/MusicPlayer";
-import { Box, Typography, List, ListItem, ListItemButton, ListItemText, Divider, } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import {
     Timeline,
     TimelineItem,
