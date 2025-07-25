@@ -9,11 +9,11 @@ const BlogDetail = ({ blog }) => {
     <div>
       <Typography variant="h4">{blog.title}</Typography>
       <Divider sx={{ marginY: 2 }} />
-      <Typography><strong>Date: </strong>{blog.date}</Typography>
+      <Typography variant="h6"><strong>📅 Date: </strong>{blog.date}</Typography>
       <React.Fragment>
-        <Typography variant="h6" sx={{ marginTop: 2 }}>Main Content</Typography>
+        <Typography variant="h6" sx={{ marginTop: 2 }}><strong>📝 Content</strong></Typography>
         <ul>
-          {blog.text}
+          {blog.content}
         </ul>
       </React.Fragment>
 

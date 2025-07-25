@@ -15,33 +15,45 @@ import {
 } from '@mui/lab';
 
 const BlogPage = () => {
-    const [selectedBlog, setSelectedBlog] = useState(blogs[0]);
     const sortedBlogs = [...blogs].sort((a, b) => new Date(b.date) - new Date(a.date));
+    const [selectedBlog, setSelectedBlog] = useState(sortedBlogs[0]);
+
 
     return (
         <Box sx={{ display: "fixed", height: "100%" }}>
             {/* 左侧时间轴 */}
             <Box sx={{ width: 200, borderRight: 3, borderColor: "divider", mt: 8 }}>
-                {sortedBlogs.map((blog, index) => (
-                    <TimelineItem key={blog.date}>
-                        <TimelineSeparator>
-                            <TimelineDot />
-                            {index < sortedBlogs.length - 1 && <TimelineConnector />}
-                        </TimelineSeparator>
-                        <TimelineContent>
-                            <Typography
-                                onClick={() => setSelectedBlog(blog)}
-                                sx={{
-                                    cursor: "pointer",
-                                    fontWeight: selectedBlog.id === blog.id ? "bold" : "normal",
-                                    color: selectedBlog.id === blog.id ? "primary.main" : "text.primary",
-                                }}
-                            >
-                                {blog.title}
-                            </Typography>
-                        </TimelineContent>
-                    </TimelineItem>
-                ))}
+                <Timeline position="alternate">
+                    {sortedBlogs.map((blog, index) => {
+                        const isSelected = selectedBlog.id === blog.id;
+                        return (
+                            <TimelineItem key={blog.id}>
+                                <TimelineSeparator>
+                                    <TimelineDot
+                                        sx={{
+                                            backgroundColor: isSelected ? 'primary.main' : 'white',
+                                        }}
+                                    />
+                                    {index < sortedBlogs.length - 1 && (
+                                        <TimelineConnector sx={{ backgroundColor: 'white' }} />
+                                    )}
+                                </TimelineSeparator>
+                                <TimelineContent>
+                                    <Typography
+                                        onClick={() => setSelectedBlog(blog)}
+                                        sx={{
+                                            cursor: 'pointer',
+                                            color: isSelected ? 'primary.main' : 'text.primary',
+                                            fontWeight: isSelected ? 'bold' : 'normal',
+                                        }}
+                                    >
+                                        {blog.date}
+                                    </Typography>
+                                </TimelineContent>
+                            </TimelineItem>
+                        );
+                    })}
+                </Timeline>
             </Box>
 
             {/* 右侧Blog细节 */}

@@ -1,6 +1,6 @@
 // src/components/ProjectDetail.js
 import React from "react";
-import { Link, Typography, Divider, Box, ImageList, ImageListItem } from "@mui/material";
+import { Link, Typography, Tooltip, Divider, Box, ImageList, ImageListItem } from "@mui/material";
 import IconButton from '@mui/material/IconButton';
 import LanguageIcon from '@mui/icons-material/Language';
 
@@ -12,14 +12,18 @@ const ProjectDetail = ({ project }) => {
       <Box sx={{ display: "flex", gap: 1 }}>
         <Typography variant="h4">{project.title}</Typography>
         {project.link && (
-          <IconButton
-            component="a"
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <LanguageIcon />
-          </IconButton>
+          <Tooltip title="Click to visit" arrow placement="right">
+            <IconButton
+              component="a"
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              color="success"
+            >
+              <LanguageIcon />
+            </IconButton>
+          </Tooltip>
+
         )}
       </Box>
 
@@ -57,8 +61,8 @@ const ProjectDetail = ({ project }) => {
             <img
               key={i}
               src={`/projects/images/${img}`}
-              alt={`project-${i}`}
-              style={{ width: "100%", maxWidth: 400, marginTop: 10 }}
+              alt={`${project.title}-${i}`}
+              style={{ width: "95%", height: "auto", border: "2px solid #ccc", marginTop: 25, marginLeft: 25, marginBottom: 25 }}
             />
           ))}
         </>
@@ -70,8 +74,8 @@ const ProjectDetail = ({ project }) => {
             <video
               key={i}
               controls
-              style={{ width: "100%", maxWidth: 500, marginTop: 10 }}
               src={`/projects/videos/${video}`}
+              style={{ width: "30%", height: "auto", marginTop: 25, marginLeft: 25, marginBottom: 25 }}
             >
               Your browser does not support the video tag.
             </video>
