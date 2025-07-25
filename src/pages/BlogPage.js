@@ -3,8 +3,10 @@ import React, { useState } from "react";
 import blogs from "../data/blogs.json";
 import BlogDetail from "../components/BlogDetail";
 import BlogWallPaper from '../components/BlogWallPaper';
+import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import MusicPlayerSlider from "../components/MusicPlayer";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, IconButton } from "@mui/material";
+import useMediaQuery from '@mui/material/useMediaQuery';
 import {
     Timeline,
     TimelineItem,
@@ -13,10 +15,15 @@ import {
     TimelineContent,
     TimelineDot,
 } from '@mui/lab';
+import { useTheme } from "@mui/material/styles";
+
 
 const BlogPage = () => {
     const sortedBlogs = [...blogs].sort((a, b) => new Date(b.date) - new Date(a.date));
     const [selectedBlog, setSelectedBlog] = useState(sortedBlogs[0]);
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down("sm")); // 小于600px 为 mobile
+    const [showPlayer, setShowPlayer] = useState(false);
 
 
     return (
@@ -57,18 +64,41 @@ const BlogPage = () => {
             </Box>
 
             {/* 右侧Blog细节 */}
-            <Box sx={{ flexGrow: 1, paddingLeft: 3, paddingRight: 3, paddingBottom: 3, mt: 12, }}>
+            <Box sx={{ flexGrow: 1, paddingLeft: 3, paddingRight: 3, paddingBottom: 3, mt: 10 }}>
                 <BlogDetail blog={selectedBlog} />
                 <BlogWallPaper />
             </Box>
-            <Box sx={{
-                position: 'fixed',
-                bottom: -8,
-                right: 16,
-                zIndex: 10,
-            }}>
-                <MusicPlayerSlider />
-            </Box>
+
+            {/* Music Note Icon  */}
+            {isMobile && (
+                <Box sx={{ position: 'fixed', bottom: 16, right: 16, zIndex: 20 }}>
+                    <IconButton
+                        color="primary"
+                        onClick={() => setShowPlayer((prev) => !prev)}
+                        sx={{
+                            backgroundColor: "white",
+                            border: "1px solid #ccc",
+                            "&:hover": {
+                                backgroundColor: "#f0f0f0"
+                            }
+                        }}
+                    >
+                        <MusicNoteIcon fontSize="small" />
+                    </IconButton>
+                </Box>
+            )}
+            {/* If MusicNoteIcon == 1, show Player */}
+            {(!isMobile || showPlayer) && (
+                <Box sx={{
+                    position: 'fixed',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    zIndex: 20
+                }}>
+                    <MusicPlayerSlider />
+                </Box>
+            )}
         </Box>
     );
 };
