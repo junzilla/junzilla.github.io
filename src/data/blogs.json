@@ -31,9 +31,12 @@
   },
   {
     "id": 4,
-    "title": "2013 Mac Pro",
+    "title": "Mac Pro 2013",
     "date": "2023-10-26",
-    "content": "Test test test test",
+    "content": [
+      "I bought two Mac Pro 2013 at Viginia Tech auction. Configuration: Xeon E5-1620 v2, Dual AMD FirePro D300 with 2GB of GDDR5 VRAM each, 16GB x4 DDR3 1866 MT/s.",
+      "After seraching online, knowing that this model can support a maximum of 128GB RAM. However, due to the memory controller bottleneck, the memory frequency will be reduced to 1333 MT/s."
+    ],
     "media": {
       "images": [],
       "videos": []
@@ -79,7 +82,7 @@
       "videos": []
     }
   },
-    {
+  {
     "id": 9,
     "title": "MSI Z390 Godlike & i9-9900KS",
     "date": "2025-06-01",

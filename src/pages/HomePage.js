@@ -11,12 +11,7 @@ function App() {
         </Typography>
 
         <Box sx={{ mb: 4 }}>
-          <Typography variant="h6">👤 Name</Typography>
-          <Typography>Junjie Lin</Typography>
-        </Box>
-
-        <Box sx={{ mb: 4 }}>
-          <Typography variant="h6">📝 Self-Introduction</Typography>
+          <Typography variant="h6">🧑🏻‍💻 Self-Introduction</Typography>
           <Typography>
             I am an undergraduate student in Computer Science with a passion for technology and product development.
             I am proficient in React, Node.js, and cloud deployment.
@@ -25,7 +20,7 @@ function App() {
         </Box>
 
         <Box sx={{ mb: 4 }}>
-          <Typography variant="h6">🎯 Hobbies</Typography>
+          <Typography variant="h6">🔍 Hobbies</Typography>
           <ul>
             <li>Programming & Web Development</li>
             <li>Hardware optimization (overclocking and cooling)</li>

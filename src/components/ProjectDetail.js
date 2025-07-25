@@ -62,7 +62,7 @@ const ProjectDetail = ({ project }) => {
               key={i}
               src={`/projects/images/${img}`}
               alt={`${project.title}-${i}`}
-              style={{ width: "95%", height: "auto", border: "2px solid #ccc", marginTop: 25, marginLeft: 25, marginBottom: 25 }}
+              style={{ width: "48%", height: "auto", border: "2px solid #ccc", marginTop: 25, marginLeft: 25, marginBottom: 25 }}
             />
           ))}
         </>
@@ -75,7 +75,7 @@ const ProjectDetail = ({ project }) => {
               key={i}
               controls
               src={`/projects/videos/${video}`}
-              style={{ width: "30%", height: "auto", marginTop: 25, marginLeft: 25, marginBottom: 25 }}
+              style={{ width: "48%", height: "auto", marginTop: 25, marginLeft: 25, marginBottom: 25 }}
             >
               Your browser does not support the video tag.
             </video>
