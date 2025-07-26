@@ -11,6 +11,8 @@ import FastForwardRounded from '@mui/icons-material/FastForwardRounded';
 import FastRewindRounded from '@mui/icons-material/FastRewindRounded';
 import VolumeUpRounded from '@mui/icons-material/VolumeUpRounded';
 import VolumeDownRounded from '@mui/icons-material/VolumeDownRounded';
+import songs from '../data/songs';
+
 
 const Widget = styled('div')(({ theme }) => ({
     padding: 16,
@@ -47,11 +49,26 @@ const TinyText = styled(Typography)({
     letterSpacing: 0.2,
 });
 
+
 export default function MusicPlayerSlider() {
     const audioRef = React.useRef(null);
     const [paused, setPaused] = React.useState(true);
     const [position, setPosition] = React.useState(0);
     const [duration, setDuration] = React.useState(0);
+    const [currentSongIndex, setCurrentSongIndex] = React.useState(0);
+    const song = songs[currentSongIndex];
+
+    const handleNext = () => {
+        setCurrentSongIndex((prev) => (prev + 1) % songs.length);
+        setPaused(true);
+        setPosition(0);
+    };
+
+    const handlePrev = () => {
+        setCurrentSongIndex((prev) => (prev - 1 + songs.length) % songs.length);
+        setPaused(true);
+        setPosition(0);
+    };
 
     const formatDuration = (value) => {
         const minute = Math.floor(value / 60);
@@ -106,15 +123,15 @@ export default function MusicPlayerSlider() {
             <Widget>
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
                     <CoverImage>
-                        <img alt="Album Cover" src="/cover.jpg" />
+                        <img alt="Album Cover" src={`/music/${song.cover}`} />
                     </CoverImage>
                     <Box sx={{ ml: 1.5, minWidth: 0 }}>
 
                         <Typography noWrap>
-                            <b>(Ferr)Benake-Girl beat</b>
+                            <b>{song.title}</b>
                         </Typography>
                         <Typography variant="caption" sx={{ color: 'text.secondary', fontWeight: 500 }}>
-                            45decibel
+                            {song.artist}
                         </Typography>
                     </Box>
                 </Box>
@@ -154,7 +171,7 @@ export default function MusicPlayerSlider() {
                 </Box>
 
                 <Box sx={{ display: 'flex', justifyContent: 'center', mt: -1 }}>
-                    <IconButton aria-label="rewind">
+                    <IconButton aria-label="rewind" onClick={handlePrev}>
                         <FastRewindRounded fontSize="large" />
                     </IconButton>
                     <IconButton aria-label="play/pause" onClick={handlePlayPause}>
@@ -164,7 +181,7 @@ export default function MusicPlayerSlider() {
                             <PauseRounded sx={{ fontSize: '3rem' }} />
                         )}
                     </IconButton>
-                    <IconButton aria-label="forward">
+                    <IconButton aria-label="forward" onClick={handleNext}>
                         <FastForwardRounded fontSize="large" />
                     </IconButton>
                 </Box>
@@ -176,7 +193,7 @@ export default function MusicPlayerSlider() {
                 </Stack>
 
                 {/* 插入音频文件 */}
-                <audio ref={audioRef} src="/(Ferr)Benake-Girl beat - 45decibel.mp3" />
+                <audio ref={audioRef} src={`/music/${song.src}`} />
             </Widget>
         </Box>
     );
