@@ -23,7 +23,7 @@ const BlogPage = () => {
     const [selectedBlog, setSelectedBlog] = useState(sortedBlogs[0]);
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("sm")); // 小于600px 为 mobile
-    const [showPlayer, setShowPlayer] = useState(false);
+    const [showPlayer, setShowPlayer] = useState(!isMobile);
 
 
     return (
@@ -70,35 +70,34 @@ const BlogPage = () => {
             </Box>
 
             {/* Music Note Icon  */}
-            {isMobile && (
-                <Box sx={{ position: 'fixed', bottom: 16, right: 16, zIndex: 20 }}>
-                    <IconButton
-                        color="primary"
-                        onClick={() => setShowPlayer((prev) => !prev)}
-                        sx={{
-                            backgroundColor: "white",
-                            border: "1px solid #ccc",
-                            "&:hover": {
-                                backgroundColor: "#f0f0f0"
-                            }
-                        }}
-                    >
-                        <MusicNoteIcon fontSize="small" />
-                    </IconButton>
-                </Box>
-            )}
+            <Box sx={{ position: 'fixed', bottom: 16, right: 16, zIndex: 20 }}>
+                <IconButton
+                    color="primary"
+                    onClick={() => setShowPlayer((prev) => !prev)}
+                    sx={{
+                        backgroundColor: "white",
+                        border: "1px solid #ccc",
+                        "&:hover": {
+                            backgroundColor: "#f0f0f0"
+                        }
+                    }}
+                >
+                    <MusicNoteIcon fontSize="small" />
+                </IconButton>
+            </Box>
+
             {/* If MusicNoteIcon == 1, show Player */}
-            {(!isMobile || showPlayer) && (
-                <Box sx={{
-                    position: 'fixed',
-                    top: '50%',
-                    left: '50%',
-                    transform: 'translate(-50%, -50%)',
-                    zIndex: 20
-                }}>
+                <Box
+                    sx={{
+                        display: showPlayer ? 'block' : 'none',
+                        position: 'fixed',
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)',
+                        zIndex: 20
+                    }}>
                     <MusicPlayerSlider />
                 </Box>
-            )}
         </Box>
     );
 };

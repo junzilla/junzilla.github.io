@@ -16,7 +16,7 @@ const ProjectPage = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm")); // 小于600px 为 mobile
 
   const drawerContent = (
-    <Box sx={{ width: 200, mt: 7 }}>
+    <Box sx={{ width: '100%', mt: -1 }}>
       <List>
         {projects.map((proj, index) => (
           <React.Fragment key={proj.id}>
@@ -49,9 +49,9 @@ const ProjectPage = () => {
 
   return (
     <Box sx={{ display: "flex" }}>
-      {/* 左侧导航：桌面端显示 / 移动端隐藏 */}
+      {/* 左侧导航：桌面端显示/移动端隐藏 */}
       {!isMobile && (
-        <Box sx={{ width: 200, borderRight: 3, borderColor: "divider", mt: 8 }}>
+        <Box sx={{ width: 200, borderRight: 3, borderColor: "divider" }}>
           {drawerContent}
         </Box>
       )}
@@ -75,6 +75,14 @@ const ProjectPage = () => {
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
         ModalProps={{ keepMounted: true }}
+        slotProps={{
+          paper: {
+            sx: {
+              top: '65px',
+              height: 'calc(100% - 65px)',
+            },
+          },
+        }}
       >
         {drawerContent}
       </Drawer>
