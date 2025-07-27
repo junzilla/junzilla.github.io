@@ -236,9 +236,9 @@
     },
     "challenges": [
       "Reusable components: facilitate future maintenance.",
-      "Static JSON file used as data source: if I want to add a project or a blog, I just need to modify the keys and values in the JSON file. The components will ”map“ these data.",
+      "Static JSON file used as data source: if I want to add a project or a blog, I just need to modify the keys and values in the JSON file. The components will ”map“ these data. For music songs, I prefer JS file to store these.",
       "Music player on the BlogPage: learning offical documention about design.",
-      "Optimized for mobile devices: use Drawer and Meta Tag to hide unimportnant components, thereby providing more space for the main content."
+      "Optimized for mobile devices: use Drawer to hide unimportant components, thereby providing more space for the main content. Also, using meta tag to enable Apple Safari status bar appearance."
     ]
   }
 ]
