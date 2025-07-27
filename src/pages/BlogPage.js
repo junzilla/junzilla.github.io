@@ -64,7 +64,7 @@ const BlogPage = () => {
             </Box>
 
             {/* 右侧Blog细节 */}
-            <Box sx={{ flexGrow: 1, paddingLeft: 3, paddingRight: 3, paddingBottom: 3, mt: 10 }}>
+            <Box sx={{ flexGrow: 1, paddingLeft: 3, paddingRight: 3, paddingBottom: 3, mt: 9 }}>
                 <BlogDetail blog={selectedBlog} />
                 <BlogWallPaper />
             </Box>
