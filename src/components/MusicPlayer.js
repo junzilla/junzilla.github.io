@@ -59,15 +59,37 @@ export default function MusicPlayerSlider() {
     const song = songs[currentSongIndex];
 
     const handleNext = () => {
-        setCurrentSongIndex((prev) => (prev + 1) % songs.length);
-        setPaused(true);
+        const nextIndex = (currentSongIndex + 1) % songs.length;
+        setCurrentSongIndex(nextIndex);
         setPosition(0);
+        setPaused(false);  // 暂停按钮不变
+
+        setTimeout(() => {
+            const audio = audioRef.current;
+            if (audio) {
+                audio.load(); // 重新加载新的 src
+                audio.play().catch((e) => {
+                    console.error("播放失败：", e);
+                });
+            }
+        }, 0);
     };
 
     const handlePrev = () => {
-        setCurrentSongIndex((prev) => (prev - 1 + songs.length) % songs.length);
-        setPaused(true);
+        const prevIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+        setCurrentSongIndex(prevIndex);
         setPosition(0);
+        setPaused(false);
+
+        setTimeout(() => {
+            const audio = audioRef.current;
+            if (audio) {
+                audio.load();
+                audio.play().catch((e) => {
+                    console.error("播放失败：", e);
+                });
+            }
+        }, 0);
     };
 
     const formatDuration = (value) => {
