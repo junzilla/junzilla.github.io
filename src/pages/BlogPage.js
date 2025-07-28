@@ -7,6 +7,7 @@ import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import MusicPlayerSlider from "../components/MusicPlayer";
 import { Box, Typography, IconButton, Drawer } from "@mui/material";
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from "@mui/material/styles";
 import {
     Timeline,
     TimelineItem,
@@ -15,7 +16,6 @@ import {
     TimelineContent,
     TimelineDot,
 } from '@mui/lab';
-import { useTheme } from "@mui/material/styles";
 import LinearScaleIcon from '@mui/icons-material/LinearScale';
 
 
@@ -48,7 +48,10 @@ const BlogPage = () => {
                             </TimelineSeparator>
                             <TimelineContent>
                                 <Typography
-                                    onClick={() => setSelectedBlog(blog)}
+                                    onClick={() => {
+                                        setSelectedBlog(blog);
+                                        setDrawerOpen(false); // 点击后自动关闭抽屉
+                                    }}
                                     sx={{
                                         cursor: 'pointer',
                                         color: isSelected ? 'primary.main' : 'text.primary',
@@ -69,7 +72,7 @@ const BlogPage = () => {
 
     return (
         <Box sx={{ display: "fixed", height: "100%" }}>
-            {/* 左侧时间轴 */}
+            {/* 左侧导航：桌面端显示/移动端隐藏 */}
             {!isMobile && (
                 <Box sx={{ width: 200, borderRight: 3, borderColor: "divider", mt: 8 }}>
                     {drawerContent}
