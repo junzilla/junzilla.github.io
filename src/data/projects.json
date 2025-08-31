@@ -3,7 +3,7 @@
     "id": "1",
     "title": "RoboGrinder Website",
     "description": "An offcial website for RoboGrinder, an undergraduate robotic engineering design team at Virginia Tech.",
-    "link": "http://robogrinder.org",
+    "link": "https://robogrinder.org",
     "tools": {
       "hardware": [
         "Amazon Lightsail"
