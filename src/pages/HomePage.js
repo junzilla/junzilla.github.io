@@ -15,7 +15,7 @@ function App() {
           <Typography>
             I am an undergraduate student in Computer Science with a passion for technology and product development.
             I am proficient in React, Node.js, and cloud deployment.
-            Currently, I am working on a Capstone project management system and planning to pursue a full-time frontend developer role upon graduation.
+            Currently, I am studying my final semester at Virginia Tech and planning to pursue a full-time frontend developer role upon graduation.
           </Typography>
         </Box>
 
@@ -29,8 +29,10 @@ function App() {
         </Box>
 
         <Box sx={{ mb: 4 }}>
-          <Typography variant="h6">💼 Expected Position</Typography>
-          <Typography>Full Stack / Frontend Engineer (2026 Spring)</Typography>
+          <Typography variant="h6">💼 Expected Position (2026 Spring)</Typography>
+          <Typography>Full Stack / Frontend Engineer</Typography>
+          <Typography>Mobile Application Engineer</Typography>
+          <Typography>Software Engineer</Typography>
         </Box>
 
         <Box sx={{ textAlign: "center", mt: 6, fontSize: "0.9rem", color: "#666" }}>
