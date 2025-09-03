@@ -54,32 +54,64 @@ const ProjectDetail = ({ project }) => {
       )}
 
       {/* 媒体文件（Json会把图片和视频以数组方式存储，这里用map遍历 */}
+      {/* 🖼️ Photos */}
       {project.media?.images?.length > 0 && (
         <>
-          <Typography variant="h6" sx={{ marginTop: 2 }}>🖼️ Photos</Typography>
-          {project.media.images.map((img, i) => (
-            <img
-              key={i}
-              src={`/projects/images/${img}`}
-              alt={`${project.title}-${i}`}
-              style={{ width: "48%", height: "auto", border: "2px solid #ccc", marginTop: 25, marginLeft: 25, marginBottom: 25 }}
-            />
-          ))}
+          <Typography variant="h6" sx={{ mt: 2 }}>🖼️ Photos</Typography>
+          <Box
+            sx={{
+              display: 'grid',
+              gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, // 手机1列，>=600px两列
+              gap: { xs: 1.5, sm: 3 },
+              alignItems: 'start'
+            }}
+          >
+            {project.media.images.map((img, i) => (
+              <Box
+                key={i}
+                component="img"
+                src={`/projects/images/${img}`}
+                alt={`${project.title}-${i}`}
+                loading="lazy"
+                //style={{ width: "48%", height: "auto", border: "2px solid #ccc", marginTop: 25, marginLeft: 25, marginBottom: 25 }}
+                sx={{
+                  width: '100%',          // 手机时铺满屏幕（容器宽度）
+                  height: 'auto',
+                  border: '2px solid #ccc',
+                  borderRadius: 1,
+                  display: 'block'
+                }}
+              />
+            ))}
+          </Box>
         </>
       )}
+
+      {/* 🎥 Videos */}
       {project.media?.videos?.length > 0 && (
         <>
-          <Typography variant="h6" sx={{ marginTop: 2 }}>🎥 Videos</Typography>
-          {project.media.videos.map((video, i) => (
-            <video
-              key={i}
-              controls
-              src={`/projects/videos/${video}`}
-              style={{ width: "48%", height: "auto", marginTop: 25, marginLeft: 25, marginBottom: 25 }}
-            >
-              Your browser does not support the video tag.
-            </video>
-          ))}
+          <Typography variant="h6" sx={{ mt: 2 }}>🎥 Videos</Typography>
+          <Box
+            sx={{
+              display: 'grid',
+              gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' },
+              gap: { xs: 1.5, sm: 3 }
+            }}
+          >
+            {project.media.videos.map((video, i) => (
+              <Box
+                key={i}
+                component="video"
+                controls
+                src={`/projects/videos/${video}`}
+                sx={{
+                  width: '100%',
+                  height: 'auto',
+                  borderRadius: 1
+                }}
+              />
+            ))}
+          </Box>
         </>
       )}
     </div>
