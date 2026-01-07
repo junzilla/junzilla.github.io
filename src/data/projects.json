@@ -114,7 +114,11 @@
   {
     "id": "5",
     "title": "Population Visualization Website",
-    "description": "XXX",
+    "description": ["Frontend: Built an interactive React web with MUI library and D3.js (editable table + derived calculations), refactoring UI into reusable components/hooks and event-driven handlers. Wired with Axios for data loading and updates. ",
+                  "Backend: Migrated persistence from localStorage to MongoDB. User can access synced data on different devices. ",
+                  "Developed a Node.js/Express API with routing/middleware and CORS."
+    ],
+                    
     "link": null,
     "tools": {
       "hardware": [
@@ -166,7 +170,7 @@
   },
   {
     "id": "7",
-    "title": "Fancy Gallery",
+    "title": "Android Photo Gallery",
     "description": "A mobile software collecting photos from Flickr.",
     "link": null,
     "tools": {
@@ -192,7 +196,7 @@
   },
   {
     "id": "8",
-    "title": "RunCat Localizaiton",
+    "title": "RunCat Localization",
     "description": "I’ve liked this software for many years, but it never had a Chinese version, so I wanted to contribute to it.",
     "link": "https://apps.apple.com/us/app/runcat/id1429033973",
     "tools": {

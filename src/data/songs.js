@@ -20,6 +20,13 @@ const songs = [
     artist: "安室奈美恵, 初音ミク",
     cover: "/b_who_i_want_2_b.jpg",
     src: "/b_who_i_want_2_b.mp3"
+  },
+  {
+    id: "4",
+    title: "Born This Way",
+    artist: "Lady Gaga",
+    cover: "/born_this_way.jpg",
+    src: "/born_this_way.mp3"
   }
 ];
 

@@ -24,7 +24,7 @@ function App() {
           <ul>
             <li>Programming & Web Development</li>
             <li>Hardware optimization (overclocking and cooling)</li>
-            <li>Game: Rainbow Six Siege, Valorant, Crossfire</li>
+            <li>Hiking and snorkeling</li>
           </ul>
         </Box>
 
